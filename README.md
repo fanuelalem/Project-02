@@ -1,6 +1,6 @@
 # The Jedi Code
 
-The Jedi code will gather information about you based on your answer choices and will determine if you resemble a sith or a jedi most.
+The Jedi code is an interactive fun quiz that will gather information about you based on your answer choices and will determine if you resemble a sith or a jedi most.
 
 ![Project Image](jedipic.png)
 
