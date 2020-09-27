@@ -1,6 +1,6 @@
 # The Jedi Code
 
-The Jedi code is a full stack interactive quiz game that will gather information about you based on your answer choices and will determine if you resemble a sith or a jedi most.
+The Jedi code is a simple questionare that gathers information about you based on the answers you have provided and will determine if you resemble a sith or a jedi most.
 
 ![Project Image](jedipic.png)
 
