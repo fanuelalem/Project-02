@@ -2,6 +2,8 @@
 
 The Jedi code will gather information about you based on your answer choices and will determine if you resemble a sith or a jedi most.
 
+![Project Image](jedipic.png)
+
 # installation 
 
 to install all necessary dependencies, open the terminal inside youre root folder and run 'npm i'. 
