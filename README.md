@@ -15,10 +15,11 @@ To participate, give your best answers in the questionaire then click 'submit' t
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [NodeJs]
-* [ReactJs]
-* [MySQL]
+* [NodeJs](https://developer.mozilla.org/en-US/docs/Glossary/Node.js)
+* [ReactJs](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+* [MySQL] (https://www.siteground.com/tutorials/php-mysql/mysql/)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 
 ## Deployed Link
 
