@@ -4,6 +4,10 @@ The Jedi code is an interactive fun quiz that will gather information about you 
 
 ![Project Image](jedipic.png)
 
+## Motivation
+
+our motivation when building this application was to create an engaging questionaire for people interested in Star Wars. Our group focused on building a theme similar to the films to make fans excited. 
+
 # installation 
 
 to install all necessary dependencies, open the terminal inside youre root folder and run 'npm i'. 
