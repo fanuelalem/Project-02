@@ -17,7 +17,7 @@ run 'npm start' inside your root terminal.
 
 To participate, give your best answers in the questionaire then click 'submit' to get your results
 
-## Built With
+## Technologies
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
