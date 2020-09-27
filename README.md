@@ -4,22 +4,25 @@ A full stack application that grades a user's response in an interactive trivia 
 
 # installation 
 
-run 'npm i' inside the root folder of your terminal.
-
+to install all necessary dependencies, open the terminal inside youre root folder and run 'npm i'. 
 
 ## Getting Started
+run 'npm start' inside your root terminal.
 
-give your best answers in the questionaire and click 'submit', to get your results
+To participate, give your best answers in the questionaire then click 'submit' to get your results
 
 ## Built With
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [NodeJs]
+* [ReactJs]
+* [MySQL]
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](https://fanuelproject2.herokuapp.com/)
 
 
 ## Authors
