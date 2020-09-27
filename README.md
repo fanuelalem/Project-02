@@ -1,6 +1,6 @@
 # The Jedi Code
 
-The Jedi code is a simple questionare that gathers information based on answers users pick, and determines if they resemble a sith or a jedi most.
+The Jedi code is a simple questionare that determines if a user resembles the personality of a sith or a jedi based on a set of specific questions. 
 
 ![Project Image](jedipic.png)
 
