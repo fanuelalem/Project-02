@@ -281,7 +281,7 @@ deleteUserById = (id) => {
                  
                  <input placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input>
  
-                 <button className="btn btn-primary submit"onClick={this.onSubmitHandler}>signup</button>
+                 <button className="btn btn-primary submit"onClick={this.onSubmitHandler}>Submit</button>
 
                 </div>
                 </form>
