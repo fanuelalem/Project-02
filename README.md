@@ -1,6 +1,6 @@
 # The Jedi Code
 
-A full stack application that grades a user's response in an interactive trivia game to decide whether they are a jedi or a sith.
+The Jedi code will gather information about you based on your answer choices and will determine if you resemble a sith or a jedi most.
 
 # installation 
 
