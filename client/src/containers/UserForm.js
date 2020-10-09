@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import ListItems from './ListItems'
-import Questions from "./questions"
+// import Questions from "./questions"
 // import "./../../../App.css"
 
 class UserForm extends Component {
@@ -19,7 +19,7 @@ class UserForm extends Component {
 
     onChangeHandler = (event) => {
         this.setState({[event.target.name]:event.target.value})
- 
+  
     }
 
 
@@ -646,6 +646,8 @@ deleteUserById = (id) => {
 </div>
 </div>
 </div>
+
+<input placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input>
 
 
 <input type="submit" value="Submit Answers"></input>
