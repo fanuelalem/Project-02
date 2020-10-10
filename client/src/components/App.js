@@ -5,6 +5,7 @@ import UserForm from "./../containers/UserForm"
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import UserListItem from "./../containers/userListItem"
 import NavBar from "./../components/navBar/index"
+import Home from './../containers/home'
 
 // import soundfile from "../audio_file.mp3"
 
@@ -25,7 +26,9 @@ const App = props => (
 
   {/* <NavBar/> */}
 
-<Route exact path="/" component={UserForm}/>
+<Route exact path="/" component={Home}/>
+<Route exact path="/quiz" component={UserForm}/> 
+
 <Route exact path="/users/:userId" component={UserListItem}/>
 
  
