@@ -62,7 +62,8 @@ text-align-last: center;
 
 .input-name{
     background-color:green;
-    margin-top:0
+    margin-top:0;
+    margin-bottom:10px
 }
 
 .container {

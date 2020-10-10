@@ -179,6 +179,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import ListItems from './ListItems'
 import Questions from "./questions"
+ 
 // import "./../../../App.css"
 
 class UserForm extends Component {
@@ -901,16 +902,20 @@ deleteUserById = (id) => {
 </section>
   
 
-<h1 style={{color:'white',backgroundColor:'green',marginBottom:'0'}}> score: {this.state.result} </h1>
+<h1 style={{marginTop:'10px',color:'white',backgroundColor:'green',marginBottom:'0'}}> score: {this.state.result} </h1>
 
 
 <div className="input-name">
 <input  placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input>
 
 <input className="btn btn-primary submit" 
-// onClick={this.submitAnswers} 
+onClick={this.submitAnswers} 
 type="submit" 
-value="Submit Answers"></input>
+value="Submit Answers"></input> 
+
+ 
+
+
 
 </div>
         
