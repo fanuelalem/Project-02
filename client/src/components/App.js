@@ -23,7 +23,7 @@ const App = props => (
   <Router> 
     
 
-  <NavBar/>
+  {/* <NavBar/> */}
 
 <Route exact path="/" component={UserForm}/>
 <Route exact path="/users/:userId" component={UserListItem}/>

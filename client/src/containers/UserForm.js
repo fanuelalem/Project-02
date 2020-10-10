@@ -187,6 +187,8 @@ class UserForm extends Component {
         name:'',
          users:[],
          status: "good",
+         result:0
+
 
       }
 
@@ -203,24 +205,79 @@ class UserForm extends Component {
 
 
 submitAnswers = (event) => {
-
+event.preventDefault()
     let total = 5;
         let score = 0;
         const q1 = document.forms["quizForm"]["q1"].value;
+        const q2 = document.forms["quizForm"]["q2"].value;
+        const q3 = document.forms["quizForm"]["q3"].value;
+        const q4 = document.forms["quizForm"]["q4"].value;
+        const q5 = document.forms["quizForm"]["q5"].value;
+        const q6 = document.forms["quizForm"]["q6"].value;
+        const q7 = document.forms["quizForm"]["q7"].value;
+        const q8 = document.forms["quizForm"]["q8"].value;
+        const q9 = document.forms["quizForm"]["q9"].value;
+        const q10 = document.forms["quizForm"]["q10"].value;
 
-        alert(q1)
+        let answers = ['a','b','c','d','e','f','g','h','i','j']
+
+        if(q1 == answers[5] || q1 == answers[6] || q1 == answers[7] || q1 == answers[8] || q1 == answers[9]){
+            score++
+        }
+        if(q2 == answers[5] || q2 == answers[6] || q2 == answers[7] || q2 == answers[8] || q2 == answers[9]){
+            score++
+        }
+        if(q3 == answers[5] || q3 == answers[6] || q3 == answers[7] || q3 == answers[8] || q3 == answers[9]){
+            score++
+        }
+        if(q4 == answers[5] || q4 == answers[6] || q4 == answers[7] || q4 == answers[8] || q4 == answers[9]){
+            score++
+        }
+        if(q5 == answers[5] || q5 == answers[6] || q5 == answers[7] || q5 == answers[8] || q5 == answers[9]){
+            score++
+        }
+        if(q6 == answers[5] || q6 == answers[6] || q6 == answers[7] || q6 == answers[8] || q6 == answers[9]){
+            score++
+        }
+        if(q7 == answers[5] || q7 == answers[6] || q7 == answers[7] || q7 == answers[8] || q7 == answers[9]){
+            score++
+        }
+        if(q8 == answers[5] || q8 == answers[6] || q8 == answers[7] || q8 == answers[8] || q8 == answers[9]){
+            score++
+        }
+        if(q9 == answers[5] || q9 == answers[6] || q9 == answers[7] || q9 == answers[8] || q9 == answers[9]){
+            score++
+        }
+        if(q10 == answers[5] || q10 == answers[6] || q10 == answers[7] || q10 == answers[8] || q10 == answers[9]){
+            score++
+        }
+        this.setState({result:score})
+
+
+        if(score>=5){
+            this.postJedi()
+        }
+        else{
+            this.postSith()
         
+        }
+
+        // alert(q1)
+        // alert(q2)
+        // alert(q3)
+        // alert(q4)
+        // alert(q5)
+        // alert(q6)
+        // alert(q7)
+        // alert(q8)
+        // alert(q9)
+        // alert(q10)
+
 // event.preventDefault()
 // let numRandom = Math.random() * 100
 // let status = numRandom > 50 ? "good" : "bad";
 // console.log(status, numRandom)
-// if(status === "good"){
-//     this.postJedi()
-// }
-// else{
-//     this.postSith()
 
-// }
  }
 
 
@@ -283,7 +340,11 @@ deleteUserById = (id) => {
                 <div className="row">
                     <div className="col-12"> 
 
+                    <p className="Title-Description">
+  The Jedi Code
+</p>
 
+  <div className="Descripton">A Jedi or Sith Personality Test </div>
                     
 
                     {/* <div className="class-form">  */}
@@ -291,6 +352,8 @@ deleteUserById = (id) => {
                 {/* </div> */}
                 <section>
 <form name="quizForm" onSubmit={this.submitAnswers}>
+
+
 
 <div className="Questions">
 
@@ -409,43 +472,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q3a"value="a" name="q3"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q3b"value="b" name="q3"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q3c"value="c" name="q3"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q3d"value="d" name="q3"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q3e"value="e" name="q3"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q3f"value="f" name="q3"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q2g"value="g" name="q3"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q3h"value="h" name="q3"type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q3i"value="i" name="q3"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q3j"value="j" name="q3"type="radio"></input>10<br></br>
     </div>
 
 
@@ -462,43 +525,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q4a"value="a" name="q4"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q4b"value="b" name="q4"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q4c"value="c" name="q4"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q4d"value="d" name="q4"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q4e"value="e" name="q4"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q4f"value="f" name="q4"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q4g"value="g" name="q4"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q4h"value="h" name="q4"type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q4i"value="i" name="q4"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q4j"value="j" name="q4"type="radio"></input>10<br></br>
     </div>
 
 
@@ -515,43 +578,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q5a"value="a" name="q5"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q5b"value="b" name="q5"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q5c"value="c" name="q5"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q5d"value="d" name="q5"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q5e"value="e" name="q5"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q5f"value="f" name="q5"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q5g"value="g" name="q5"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q5h"value="h" name="q5"type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q5i"value="i" name="q5"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q5j"value="j" name="q5"type="radio"></input>10<br></br>
     </div>
 
 
@@ -568,43 +631,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q6a"value="a" name="q6"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q6b"value="b" name="q6"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q6c"value="c" name="q6"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q6d"value="d" name="q6"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q6e"value="e" name="q6"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q6f"value="f" name="q6"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q6g"value="g" name="q6"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q6h"value="h" name="q6" type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q6i"value="i" name="q6"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q6j"value="j" name="q6"type="radio"></input>10<br></br>
     </div>
 
 
@@ -621,43 +684,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q7a"value="a" name="q7"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q7b"value="b" name="q7"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q7c"value="c" name="q7"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q7d"value="d" name="q7"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q7e"value="e" name="q7"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q7f"value="f" name="q7"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q7g"value="g" name="q7"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q7h"value="h" name="q7"type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q7i"value="i" name="q7"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q7j"value="j" name="q7"type="radio"></input>10<br></br>
     </div>
 
 
@@ -674,43 +737,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q8a"value="a" name="q8"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q8b"value="b" name="q8"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q8c"value="c" name="q8"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q8d"value="d" name="q8"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q8e"value="e" name="q8"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q8f"value="f" name="q8"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q8g"value="g" name="q8"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q8h"value="h" name="q8"type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q8i"value="i" name="q8"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q8j"value="j" name="q8"type="radio"></input>10<br></br>
     </div>
 
 
@@ -727,43 +790,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q9a"value="a" name="q9"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q9b"value="b" name="q9"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q9c"value="c" name="q9"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q9d"value="d" name="q9"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q9e"value="e" name="q9"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q9f"value="f" name="q9"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q9g"value="g" name="q9"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q9h"value="h" name="q9"type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q9i"value="i" name="q9"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q9j"value="j" name="q9"type="radio"></input>10<br></br>
     </div>
 
 
@@ -780,43 +843,43 @@ deleteUserById = (id) => {
     <div className="form-check form-check-inline center">
 
     <div >
-    <input className="form-check input" id="q2a"value="a" name="q2"type="radio"></input>1 
+    <input className="form-check input" id="q10a"value="a" name="q10"type="radio"></input>1 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2b"value="b" name="q2"type="radio"></input>2<br></br>
+    <input className="form-check input" id="q10b"value="b" name="q10"type="radio"></input>2<br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2c"value="c" name="q2"type="radio"></input>3 <br></br>
+    <input className="form-check input" id="q10c"value="c" name="q10"type="radio"></input>3 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2d"value="d" name="q2"type="radio"></input>4 <br></br>
+    <input className="form-check input" id="q10d"value="d" name="q10"type="radio"></input>4 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2e"value="e" name="q2"type="radio"></input>5 
+    <input className="form-check input" id="q10e"value="e" name="q10"type="radio"></input>5 
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2f"value="f" name="q2"type="radio"></input>6 <br></br>
+    <input className="form-check input" id="q10f"value="f" name="q10"type="radio"></input>6 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2g"value="g" name="q2"type="radio"></input>7 <br></br>
+    <input className="form-check input" id="q10g"value="g" name="q10"type="radio"></input>7 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2h"value="h" name="q2"type="radio"></input>8 <br></br>
+    <input className="form-check input" id="q10h"value="h" name="q10"type="radio"></input>8 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2i"value="i" name="q2"type="radio"></input>9 <br></br>
+    <input className="form-check input" id="q10i"value="i" name="q10"type="radio"></input>9 <br></br>
     </div>
 
     <div className="form-check">
-    <input className="form-check input" id="q2j"value="j" name="q2"type="radio"></input>10<br></br>
+    <input className="form-check input" id="q10j"value="j" name="q10"type="radio"></input>10<br></br>
     </div>
 
 
@@ -829,7 +892,10 @@ deleteUserById = (id) => {
 <input placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input>
 
 
-<input className="btn btn-primary submit" onClick={this.submitAnswers} type="submit" value="Submit Answers"></input>
+<input className="btn btn-primary submit" 
+// onClick={this.submitAnswers} 
+type="submit" 
+value="Submit Answers"></input>
 
 {/* <input placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input> */}
  
@@ -840,7 +906,8 @@ deleteUserById = (id) => {
 </section>
   
 
-                 
+<h1 style={{color:'white'}}> score: {this.state.result} </h1>
+        
 
 
                 
