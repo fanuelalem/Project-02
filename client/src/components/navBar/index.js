@@ -1,6 +1,6 @@
 import React from "react"
 import {Link } from "react-router-dom"
-// import "./../../components/react-sound/index.css"
+import "./../../components/react-sound/index.css"
 
 const NavBar = props => (
 
@@ -9,7 +9,7 @@ const NavBar = props => (
   <div id="navbarNav">
     <ul className="navbar-nav">
       <li className="nav-item active">
-        <Link className="nav-link users" to="/">Users <span className="sr-only">(current)</span></Link>
+        {/* <Link className="nav-link users" to="/">Users <span className="sr-only">(current)</span></Link> */}
       </li>
      
       
