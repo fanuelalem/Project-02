@@ -881,21 +881,16 @@ deleteUserById = (id) => {
     <div className="form-check">
     <input className="form-check input" id="q10j"value="j" name="q10"type="radio"></input>10<br></br>
     </div>
+ 
 
-
+ 
     
     
 </div>
 </div>
 </div>
 
-<input placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input>
-
-
-<input className="btn btn-primary submit" 
-// onClick={this.submitAnswers} 
-type="submit" 
-value="Submit Answers"></input>
+ 
 
 {/* <input placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input> */}
  
@@ -906,9 +901,21 @@ value="Submit Answers"></input>
 </section>
   
 
-<h1 style={{color:'white'}}> score: {this.state.result} </h1>
-        
+<h1 style={{color:'white',backgroundColor:'green',marginBottom:'0'}}> score: {this.state.result} </h1>
 
+
+<div className="input-name">
+<input  placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input>
+
+<input className="btn btn-primary submit" 
+// onClick={this.submitAnswers} 
+type="submit" 
+value="Submit Answers"></input>
+
+</div>
+        
+ 
+ 
 
                 
 

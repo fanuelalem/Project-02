@@ -33,6 +33,7 @@ body {
 
 }
 .Questions {
+margin-top: 40px;
 font-size: 35px;
 text-align: center;
 font-family: sans-serif;
@@ -59,6 +60,11 @@ text-align-last: center;
 
 }
 
+.input-name{
+    background-color:green;
+    margin-top:0
+}
+
 .container {
     margin-right: 0px !important;
     margin-left: 380px !important;
@@ -66,6 +72,7 @@ text-align-last: center;
 
 
 .jumbotron {
+    margin-bottom:0;
    background-image: linear-gradient(rgb(0, 0, 8), rgb(45, 214, 87));
 }
 
