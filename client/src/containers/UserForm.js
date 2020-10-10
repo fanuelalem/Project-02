@@ -203,17 +203,24 @@ class UserForm extends Component {
 
 
 submitAnswers = (event) => {
-event.preventDefault()
-let numRandom = Math.random() * 100
-let status = numRandom > 50 ? "good" : "bad";
-console.log(status, numRandom)
-if(status === "good"){
-    this.postJedi()
-}
-else{
-    this.postSith()
 
-}
+    let total = 5;
+        let score = 0;
+        const q1 = document.forms["quizForm"]["q1"].value;
+
+        alert(q1)
+        
+// event.preventDefault()
+// let numRandom = Math.random() * 100
+// let status = numRandom > 50 ? "good" : "bad";
+// console.log(status, numRandom)
+// if(status === "good"){
+//     this.postJedi()
+// }
+// else{
+//     this.postSith()
+
+// }
  }
 
 
