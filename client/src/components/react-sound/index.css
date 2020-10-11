@@ -60,6 +60,13 @@ text-align-last: center;
 
 }
 
+.get-started{
+    border-radius:14px;
+    border:solid black;
+    background-color:#DC143C;
+    color:black;
+}
+
 .input-name{
     background-color:green;
     margin-top:0;
