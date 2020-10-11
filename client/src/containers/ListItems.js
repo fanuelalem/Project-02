@@ -28,8 +28,7 @@ const ListItems = props => (
       {/* <h6 className="card-subtitle mb-2 text-muted"> {item.jedi? '':''}   </h6> */}
       <p className="card-text">  <strong> Sith / Jedi: </strong> {item.sith? "Sith": "Jedi"}
 
-      
-  </p>
+   </p>
   </div>
       
       
