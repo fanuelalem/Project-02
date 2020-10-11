@@ -178,7 +178,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import ListItems from './ListItems'
-import Questions from "./questions"
+// import Questions from "./questions"
  
 // import "./../../../App.css"
 
@@ -207,7 +207,7 @@ class UserForm extends Component {
 
 submitAnswers = (event) => {
 event.preventDefault()
-    let total = 5;
+    // let total = 5;
         let score = 0;
         const q1 = document.forms["quizForm"]["q1"].value;
         const q2 = document.forms["quizForm"]["q2"].value;
@@ -222,34 +222,34 @@ event.preventDefault()
 
         let answers = ['a','b','c','d','e','f','g','h','i','j']
 
-        if(q1 == answers[5] || q1 == answers[6] || q1 == answers[7] || q1 == answers[8] || q1 == answers[9]){
+        if(q1 === answers[5] || q1 === answers[6] || q1 === answers[7] || q1 === answers[8] || q1 === answers[9]){
             score++
         }
-        if(q2 == answers[5] || q2 == answers[6] || q2 == answers[7] || q2 == answers[8] || q2 == answers[9]){
+        if(q2 === answers[5] || q2 === answers[6] || q2 === answers[7] || q2 === answers[8] || q2 === answers[9]){
             score++
         }
-        if(q3 == answers[5] || q3 == answers[6] || q3 == answers[7] || q3 == answers[8] || q3 == answers[9]){
+        if(q3 === answers[5] || q3 === answers[6] || q3 === answers[7] || q3 === answers[8] || q3 === answers[9]){
             score++
         }
-        if(q4 == answers[5] || q4 == answers[6] || q4 == answers[7] || q4 == answers[8] || q4 == answers[9]){
+        if(q4 === answers[5] || q4 === answers[6] || q4 === answers[7] || q4 === answers[8] || q4 === answers[9]){
             score++
         }
-        if(q5 == answers[5] || q5 == answers[6] || q5 == answers[7] || q5 == answers[8] || q5 == answers[9]){
+        if(q5 === answers[5] || q5 === answers[6] || q5 === answers[7] || q5 === answers[8] || q5 === answers[9]){
             score++
         }
-        if(q6 == answers[5] || q6 == answers[6] || q6 == answers[7] || q6 == answers[8] || q6 == answers[9]){
+        if(q6 === answers[5] || q6 === answers[6] || q6 === answers[7] || q6 === answers[8] || q6 === answers[9]){
             score++
         }
-        if(q7 == answers[5] || q7 == answers[6] || q7 == answers[7] || q7 == answers[8] || q7 == answers[9]){
+        if(q7 === answers[5] || q7 === answers[6] || q7 === answers[7] || q7 === answers[8] || q7 === answers[9]){
             score++
         }
-        if(q8 == answers[5] || q8 == answers[6] || q8 == answers[7] || q8 == answers[8] || q8 == answers[9]){
+        if(q8 === answers[5] || q8 === answers[6] || q8 === answers[7] || q8 === answers[8] || q8 === answers[9]){
             score++
         }
-        if(q9 == answers[5] || q9 == answers[6] || q9 == answers[7] || q9 == answers[8] || q9 == answers[9]){
+        if(q9 === answers[5] || q9 === answers[6] || q9 === answers[7] || q9 === answers[8] || q9 === answers[9]){
             score++
         }
-        if(q10 == answers[5] || q10 == answers[6] || q10 == answers[7] || q10 == answers[8] || q10 == answers[9]){
+        if(q10 === answers[5] || q10 === answers[6] || q10 === answers[7] || q10 === answers[8] || q10 === answers[9]){
             score++
         }
         this.setState({result:score})

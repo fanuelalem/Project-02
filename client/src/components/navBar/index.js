@@ -1,5 +1,5 @@
 import React from "react"
-import {Link } from "react-router-dom"
+// import {Link } from "react-router-dom"
 import "./../../components/react-sound/index.css"
 
 const NavBar = props => (

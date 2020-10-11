@@ -59,7 +59,9 @@ align-content: center;
 text-align-last: center;
 
 }
-
+.git{
+    background-color:purple
+}
 .get-started{
     border-radius:14px;
     border:solid black;
@@ -146,8 +148,7 @@ text-align-last: center;
      margin-left: 35%;
  }
 
- .deletebtn {
- margin-left:15px }
+ 
  .form-title{color:white}
  .submit{margin-left:15px;}
 .mybtn{background-color:#5F9EA0;width:200px}
