@@ -46,7 +46,7 @@ class UserListItem extends Component {
                 <input onChange={this.handleChange}
                        value={this.state.name}/>  <button onClick={this.handleSubmit}> submit change </button>  */}
 
- <div className="card">
+ <div className="card" style={{backgroundColor:this.state.user.sith? 'red':'green'}}>
    <div className="card-body playerCard">
        <h1> Player Card</h1>
      <h5 className="card-title"> <strong> name:</strong> {this.state.user.name}</h5>
