@@ -72,8 +72,7 @@ text-align-last: center;
 .input-name{
     background-color:green;
     margin-top:0;
-    margin-bottom:10px
-}
+ }
 
 .container {
     margin-right: 0px !important;
@@ -121,12 +120,20 @@ text-align-last: center;
 }
 
 .card {
-    padding:30px;
+     padding:30px;
     /* background-color:#F5FFFA; */
     margin:15px;
     /* background-image: url('./../playerCard-image/playerCard.jpg'); */
-
+transition:0.5s ease;
+cursor:pointer
     
+  }
+
+  
+
+  .card:hover {
+      transform:scale(1.2);
+      box-shadow:5px 5px 15px rgba(0,0,0,0.6)
   }
 
  .input-form-lg {
@@ -140,7 +147,13 @@ text-align-last: center;
      
      
  }
+
+ .list-container-form{
+     background-color:purple
+ }
 .form-container{
+
+ 
     background-color:black
 }
  .form-group {

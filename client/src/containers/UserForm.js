@@ -903,7 +903,7 @@ deleteUserById = (id) => {
 </section>
   
 
-<h1 style={{marginTop:'10px',color:'white',backgroundColor:'green',marginBottom:'0'}}> score: {this.state.result} </h1>
+<h1 style={{color:'white',backgroundColor:'green',marginBottom:'0'}}> score: {this.state.result} </h1>
 
 
 <div className="input-name">
@@ -913,20 +913,20 @@ deleteUserById = (id) => {
 onClick={this.submitAnswers} 
 type="submit" 
 value="Submit Answers"></input> 
-
+   
+ <div>
+ <ListItems items={this.state.users} handleDelete={this.deleteUserById} />
+ </div>
  
-
-
 
 </div>
         
  
  
 
-                
+ 
 
-                <ListItems items={this.state.users} handleDelete={this.deleteUserById}/>
-
+ 
                     {/* </div> */}
 
 

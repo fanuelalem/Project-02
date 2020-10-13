@@ -1,27 +1,46 @@
 import React from "react" 
 import { Link } from "react-router-dom"
 import "./../components/react-sound/index.css"
-import Background from './../components/react-sound/yoda.png';
-import Background2 from './../components/react-sound/darth.jpeg';
+import yoda from './../components/react-sound/yoda.png';
+import darthvader from './../components/react-sound/darth.jpeg';
+import luke from './../components/react-sound/Luke_Sky7.jpg'
+import mace from './../components/react-sound/mace.jpg'
+import darthmaul from './../components/react-sound/darthmaul.jpeg'
+import darthsidi from './../components/react-sound/darthsidi.jpg'
 
-
+const jediList = [luke,yoda,mace]
+const sithList = [darthsidi,darthmaul,darthvader]
  
+ 
+// const jedis = jediList[Math.floor(Math.random()*jediList.length)]
+// const siths = sithList[Math.floor(Math.random()*sithList.length)]
+// let response = [0,1,2]
+// let num = []
+//  for(var i=0;i<response.length;i++){
+//    num=response[i]
+//  }
 
-const ListItems = props => (
+var text = "";
+var i;
+const num = [0,1,2]
+for(var i=0;i<3;i++){
+  text+=i
+}
 
-  <div>
+ const ListItems = props => (
 
 
 
+  <div className="list-container-form"> 
 
 
 
+{props.items.map((item,index,id)=>(
 
+   
+    <div key={item.id} className="card" style={{width:'18rem',float:'left',backgroundImage: item.jedi? "url(" + jediList[0] + ")":"url(" + sithList[0] + ")",backgroundSize:'cover',border:'none'}}>
   
- {props.items.map((item)=>(
-    <div class="card" style={{width:'18rem',float:'left',backgroundImage: item.jedi? "url(" + Background + ")":"url(" + Background2 + ")",backgroundSize:'cover'}}>
-  
-  <div class="card-body">
+  <div className="card-body">
 
     <div style={{backgroundColor:'rgba(240,255,255,.4)',padding:'8px',marginBottom:'20px',borderRadius:'8px'}}>  
       <h5 className="card-title">Name: <span> {item.name}</span></h5>
