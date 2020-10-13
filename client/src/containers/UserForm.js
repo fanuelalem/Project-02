@@ -912,10 +912,10 @@ deleteUserById = (id) => {
 <input className="btn btn-primary submit" 
 onClick={this.submitAnswers} 
 type="submit" 
-value="Submit Answers"></input> 
+ value="Submit Answers"></input> 
    
  <div>
- <ListItems items={this.state.users} handleDelete={this.deleteUserById} />
+ <ListItems key={this.state.users.id} items={this.state.users} handleDelete={this.deleteUserById} />
  </div>
  
 

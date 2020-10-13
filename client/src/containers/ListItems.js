@@ -9,8 +9,9 @@ import darthmaul from './../components/react-sound/darthmaul.jpeg'
 import darthsidi from './../components/react-sound/darthsidi.jpg'
 
 const jediList = [luke,yoda,mace]
-const sithList = [darthsidi,darthmaul,darthvader]
- 
+const sithList = [ darthmaul,darthvader,darthsidi]
+
+
  
 // const jedis = jediList[Math.floor(Math.random()*jediList.length)]
 // const siths = sithList[Math.floor(Math.random()*sithList.length)]
@@ -20,12 +21,12 @@ const sithList = [darthsidi,darthmaul,darthvader]
 //    num=response[i]
 //  }
 
-var text = "";
-var i;
-const num = [0,1,2]
-for(var i=0;i<3;i++){
-  text+=i
-}
+// var text = "";
+// var i;
+// const num = [0,1,2]
+// for(var i=0;i<num.length;i++){
+//   text+=i
+// }
 
  const ListItems = props => (
 
@@ -33,12 +34,13 @@ for(var i=0;i<3;i++){
 
   <div className="list-container-form"> 
 
+ 
+ 
 
+{props.items.map((item,index,id,)=>(
+ 
 
-{props.items.map((item,index,id)=>(
-
-   
-    <div key={item.id} className="card" style={{width:'18rem',float:'left',backgroundImage: item.jedi? "url(" + jediList[0] + ")":"url(" + sithList[0] + ")",backgroundSize:'cover',border:'none'}}>
+    <div key={item.id} className="card" style={{width:'18rem',float:'left',backgroundImage: item.jedi? "url(" + jediList[0] + ")":"url(" + sithList[2] + ")",backgroundSize:'cover',border:'none'}}>
   
   <div className="card-body">
 
@@ -111,7 +113,7 @@ for(var i=0;i<3;i++){
 //    </ul>
 
    
-   
+
 );
 
 export default ListItems;
