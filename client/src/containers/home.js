@@ -5,14 +5,18 @@ import './../components/react-sound/index.css'
 export default class home extends Component {
     render() {
         return (
-            <div className="wrapper">
+            <div className="getting-started">
 
-                <div>
+                 
+                    <Link to="/quiz"><button className="btn-lg get-started">Get Started</button></Link>
+
+             
+
+               
 
 
-<Link to="/quiz"><button className="btn-lg get-started">Get Started</button></Link>
 
-</div>
+ 
 
 
             </div>

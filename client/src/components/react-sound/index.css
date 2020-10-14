@@ -1,14 +1,18 @@
 body {
-   
-    background-image: linear-gradient(rgb(0, 0, 8), rgb(45, 214, 87));
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+   background-image:url('./backgroundstars.jpg');
+   background-size:cover;
+   width:100%;
+   height:100vh;
+   background-position: center;
+    
  }
 
-
+.getting-started{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:200px
+}
 
  .Title-Description {
      background-image: url(https://lh3.googleusercontent.com/bBr5oG5wMaszl3b-BXgvKA3l8rkx27vrGKg5SsF-tqr1Yv8CKnWsLLdR-dSzFu1uGXRCOhWSodnM1olI55QD_AlyHVYb3AFYMX56zyYNDN0FZuOu3Geq5HckbmlGgI68jpXbclruGA=w2400);
@@ -74,10 +78,7 @@ text-align-last: center;
     margin-top:0;
  }
 
-.container {
-    margin-right: 0px !important;
-    margin-left: 380px !important;
-}
+ 
 
 
 .jumbotron {
@@ -122,7 +123,7 @@ text-align-last: center;
 .card {
      padding:30px;
     /* background-color:#F5FFFA; */
-    margin:15px;
+    margin:30px;
     /* background-image: url('./../playerCard-image/playerCard.jpg'); */
 transition:0.5s ease;
 cursor:pointer

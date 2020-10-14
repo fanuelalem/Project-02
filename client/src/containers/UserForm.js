@@ -179,6 +179,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import ListItems from './ListItems'
  
+ 
 // import Questions from "./questions"
  
 // import "./../../../App.css"
@@ -189,7 +190,7 @@ class UserForm extends Component {
         name:'',
          users:[],
          status: "good",
-         result:5
+         result:0
 
 
       }
@@ -338,10 +339,13 @@ deleteUserById = (id) => {
                 
             //     />
         
-            <div className="form-container">
+            <div className="container">
                 <div className="row">
                     <div className="col-12"> 
 
+                    <div style={{backgroundColor:'black'}}>
+
+ 
                     <p className="Title-Description">
   The Jedi Code
 </p>
@@ -899,20 +903,25 @@ deleteUserById = (id) => {
 <form style={{paddingTop:'18px',paddingBottom:'10px'}}class="form-inline">
   <div class="form-group">
      <input onChange={this.onChangeHandler} value={this.state.name} placeholder="name" type="text" name="name" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline"/>
-    <input className="btn btn-primary submit" 
+      <input className="btn btn-danger submit" 
 onClick={this.submitAnswers} 
 type="submit" 
- value="Submit Answers"></input> 
+ value="submit">
+     
+     </input> 
+
+ 
   </div>
+
 </form>
 
 <h1 style={{textAlign:'center',color:'white',backgroundColor:'black',marginBottom:'0',paddingBottom:'8px',paddingTop:'8px'}}>Your score: {this.state.result}/10 
 
  
 </h1>
-<p style={{color:this.state.result<5?'red':'green'}}className="card-text">  {this.state.result<5? "Do you feel it? Do you feel the power of the dark side? The only real power! The only thing worth living for!": "The Force Is Strong With This One..."}
+<h5 style={{color:this.state.result<5?'red':'green'}} className="card-text">  {this.state.result<5? "Do you feel it? Do you feel the power of the dark side? The only real power! The only thing worth living for!": "The Force Is Strong With This One..."}
 
-</p>
+</h5>
  
 
 </div>
@@ -928,7 +937,7 @@ type="submit"
 
  
         
-<div>
+<div> 
     
     <ListItems key={this.state.users.id} items={this.state.users} handleDelete={this.deleteUserById} />
     </div>
@@ -938,6 +947,7 @@ type="submit"
 
  
                     {/* </div> */}
+                    </div>
 
 
                     </div>
