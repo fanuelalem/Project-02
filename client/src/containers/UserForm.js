@@ -190,8 +190,9 @@ class UserForm extends Component {
         name:'',
          users:[],
          status: "good",
-         result:0
-
+         result:0,
+         visible: false
+ 
 
       }
 
@@ -265,6 +266,10 @@ event.preventDefault()
         
         }
 
+
+        this.setState({
+            visible:true
+        })
         // alert(q1)
         // alert(q2)
         // alert(q3)
@@ -915,13 +920,16 @@ type="submit"
 
 </form>
 
-<h1 style={{textAlign:'center',color:'white',backgroundColor:'black',marginBottom:'0',paddingBottom:'8px',paddingTop:'8px'}}>Your score: {this.state.result}/10 
+{this.state.visible?<h1 style={{textAlign:'center',color:'white',backgroundColor:'black',marginBottom:'0',paddingBottom:'8px',paddingTop:'8px'}}>Your score: {this.state.result}/10 
 
  
-</h1>
-<h5 style={{color:this.state.result<5?'red':'green'}} className="card-text">  {this.state.result<5? "Do you feel it? Do you feel the power of the dark side? The only real power! The only thing worth living for!": "The Force Is Strong With This One..."}
+</h1>:null }
 
-</h5>
+ 
+{this.state.visible? <h5 style={{color:this.state.result<5?'red':'green'}} className="card-text">  {this.state.result<5? "Do you feel it? Do you feel the power of the dark side? The only real power! The only thing worth living for!": "The Force Is Strong With This One..."}
+
+</h5>:null}
+ 
  
 
 </div>
