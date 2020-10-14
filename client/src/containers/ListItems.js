@@ -34,8 +34,7 @@ const sithList = [ darthmaul,darthvader,darthsidi]
 
   <div> 
 
- 
- 
+  
  
 {props.items.map((item,index,id,)=>(
  
@@ -48,8 +47,7 @@ const sithList = [ darthmaul,darthvader,darthsidi]
       <h5 className="card-title">Name: <span> {item.name}</span></h5>
       {/* <h6 className="card-subtitle mb-2 text-muted"> {item.jedi? '':''}   </h6> */}
       <p className="card-text">  <strong> status: </strong> {item.sith? "Sith": "Jedi"}
-
-   </p>
+    </p>
   </div>
       
       

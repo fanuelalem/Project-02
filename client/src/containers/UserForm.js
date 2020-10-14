@@ -211,65 +211,83 @@ class UserForm extends Component {
 submitAnswers = (event) => {
 event.preventDefault()
     // let total = 5;
-        let score = 0;
-        const q1 = document.forms["quizForm"]["q1"].value;
-        const q2 = document.forms["quizForm"]["q2"].value;
-        const q3 = document.forms["quizForm"]["q3"].value;
-        const q4 = document.forms["quizForm"]["q4"].value;
-        const q5 = document.forms["quizForm"]["q5"].value;
-        const q6 = document.forms["quizForm"]["q6"].value;
-        const q7 = document.forms["quizForm"]["q7"].value;
-        const q8 = document.forms["quizForm"]["q8"].value;
-        const q9 = document.forms["quizForm"]["q9"].value;
-        const q10 = document.forms["quizForm"]["q10"].value;
-
-        let answers = ['a','b','c','d','e','f','g','h','i','j']
-
-        if(q1 === answers[5] || q1 === answers[6] || q1 === answers[7] || q1 === answers[8] || q1 === answers[9]){
-            score++
-        }
-        if(q2 === answers[5] || q2 === answers[6] || q2 === answers[7] || q2 === answers[8] || q2 === answers[9]){
-            score++
-        }
-        if(q3 === answers[5] || q3 === answers[6] || q3 === answers[7] || q3 === answers[8] || q3 === answers[9]){
-            score++
-        }
-        if(q4 === answers[5] || q4 === answers[6] || q4 === answers[7] || q4 === answers[8] || q4 === answers[9]){
-            score++
-        }
-        if(q5 === answers[5] || q5 === answers[6] || q5 === answers[7] || q5 === answers[8] || q5 === answers[9]){
-            score++
-        }
-        if(q6 === answers[5] || q6 === answers[6] || q6 === answers[7] || q6 === answers[8] || q6 === answers[9]){
-            score++
-        }
-        if(q7 === answers[5] || q7 === answers[6] || q7 === answers[7] || q7 === answers[8] || q7 === answers[9]){
-            score++
-        }
-        if(q8 === answers[5] || q8 === answers[6] || q8 === answers[7] || q8 === answers[8] || q8 === answers[9]){
-            score++
-        }
-        if(q9 === answers[5] || q9 === answers[6] || q9 === answers[7] || q9 === answers[8] || q9 === answers[9]){
-            score++
-        }
-        if(q10 === answers[5] || q10 === answers[6] || q10 === answers[7] || q10 === answers[8] || q10 === answers[9]){
-            score++
-        }
-        this.setState({result:score})
-
-
-        if(score>=5){
-            this.postJedi()
-        }
-        else{
-            this.postSith()
         
+
+        if(this.state.name == ''){
+
+
+
+
+            
+            alert('you must enter a name')
+        }else{
+           
+            
+            let score = 0;
+            const q1 = document.forms["quizForm"]["q1"].value;
+            const q2 = document.forms["quizForm"]["q2"].value;
+            const q3 = document.forms["quizForm"]["q3"].value;
+            const q4 = document.forms["quizForm"]["q4"].value;
+            const q5 = document.forms["quizForm"]["q5"].value;
+            const q6 = document.forms["quizForm"]["q6"].value;
+            const q7 = document.forms["quizForm"]["q7"].value;
+            const q8 = document.forms["quizForm"]["q8"].value;
+            const q9 = document.forms["quizForm"]["q9"].value;
+            const q10 = document.forms["quizForm"]["q10"].value;
+    
+            let answers = ['a','b','c','d','e','f','g','h','i','j']
+    
+            if(q1 === answers[5] || q1 === answers[6] || q1 === answers[7] || q1 === answers[8] || q1 === answers[9]){
+                score++
+            }
+            if(q2 === answers[5] || q2 === answers[6] || q2 === answers[7] || q2 === answers[8] || q2 === answers[9]){
+                score++
+            }
+            if(q3 === answers[5] || q3 === answers[6] || q3 === answers[7] || q3 === answers[8] || q3 === answers[9]){
+                score++
+            }
+            if(q4 === answers[5] || q4 === answers[6] || q4 === answers[7] || q4 === answers[8] || q4 === answers[9]){
+                score++
+            }
+            if(q5 === answers[5] || q5 === answers[6] || q5 === answers[7] || q5 === answers[8] || q5 === answers[9]){
+                score++
+            }
+            if(q6 === answers[5] || q6 === answers[6] || q6 === answers[7] || q6 === answers[8] || q6 === answers[9]){
+                score++
+            }
+            if(q7 === answers[5] || q7 === answers[6] || q7 === answers[7] || q7 === answers[8] || q7 === answers[9]){
+                score++
+            }
+            if(q8 === answers[5] || q8 === answers[6] || q8 === answers[7] || q8 === answers[8] || q8 === answers[9]){
+                score++
+            }
+            if(q9 === answers[5] || q9 === answers[6] || q9 === answers[7] || q9 === answers[8] || q9 === answers[9]){
+                score++
+            }
+            if(q10 === answers[5] || q10 === answers[6] || q10 === answers[7] || q10 === answers[8] || q10 === answers[9]){
+                score++
+            }
+            this.setState({result:score})
+    
+    
+            if(score>=5){
+                this.postJedi()
+            }
+            else{
+                this.postSith()
+            
+            }
+
+
+
+
+            this.setState({
+                visible:true
+            })
+
         }
 
-
-        this.setState({
-            visible:true
-        })
+        
         // alert(q1)
         // alert(q2)
         // alert(q3)
@@ -947,7 +965,7 @@ type="submit"
         
 <div> 
     
-    <ListItems key={this.state.users.id} items={this.state.users} handleDelete={this.deleteUserById} />
+    <ListItems key={this.state.users.id} score={this.state.result} items={this.state.users} handleDelete={this.deleteUserById} />
     </div>
  
 
