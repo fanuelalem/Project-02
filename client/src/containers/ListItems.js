@@ -40,7 +40,7 @@ const sithList = [ darthmaul,darthvader,darthsidi]
 {props.items.map((item,index,id,)=>(
  
 
-    <div key={item.id} className="card" style={{width:'18rem',float:'left',backgroundImage: item.jedi? "url(" + jediList[0] + ")":"url(" + sithList[2] + ")",backgroundSize:'cover',border:'none'}}>
+    <div key={item.id} className="card" style={{width:'18rem',float:'left',backgroundImage: item.jedi? "url(" + jediList[1] + ")":"url(" + sithList[2] + ")",backgroundSize:'cover',border:'none'}}>
   
   <div className="card-body">
 
