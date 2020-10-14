@@ -189,7 +189,7 @@ class UserForm extends Component {
         name:'',
          users:[],
          status: "good",
-         result:0
+         result:5
 
 
       }
@@ -894,6 +894,29 @@ deleteUserById = (id) => {
 
  
 
+<div style={{textAlign:'center'}}className="input-name">
+
+<form style={{paddingTop:'18px',paddingBottom:'10px'}}class="form-inline">
+  <div class="form-group">
+     <input onChange={this.onChangeHandler} value={this.state.name} placeholder="name" type="text" name="name" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline"/>
+    <input className="btn btn-primary submit" 
+onClick={this.submitAnswers} 
+type="submit" 
+ value="Submit Answers"></input> 
+  </div>
+</form>
+
+<h1 style={{textAlign:'center',color:'white',backgroundColor:'black',marginBottom:'0',paddingBottom:'8px',paddingTop:'8px'}}>Your score: {this.state.result}/10 
+
+ 
+</h1>
+<p style={{color:this.state.result<5?'red':'green'}}className="card-text">  {this.state.result<5? "Do you feel it? Do you feel the power of the dark side? The only real power! The only thing worth living for!": "The Force Is Strong With This One..."}
+
+</p>
+ 
+
+</div>
+
 {/* <input placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input> */}
  
  {/* <button value="Submit Answers" className="btn btn-primary submit"onClick={this.submitAnswers}>signup</button> */}
@@ -903,25 +926,12 @@ deleteUserById = (id) => {
 </section>
   
 
-<h1 style={{color:'white',backgroundColor:'green',marginBottom:'0'}}> score: {this.state.result} </h1>
-
-
-<div className="input-name">
-<input  placeholder="name" onChange={this.onChangeHandler} value={this.state.name} type="text" name="name"></input>
-
-<input className="btn btn-primary submit" 
-onClick={this.submitAnswers} 
-type="submit" 
- value="Submit Answers"></input> 
-   
- <div>
- <ListItems key={this.state.users.id} items={this.state.users} handleDelete={this.deleteUserById} />
- </div>
  
-
-</div>
         
- 
+<div>
+    
+    <ListItems key={this.state.users.id} items={this.state.users} handleDelete={this.deleteUserById} />
+    </div>
  
 
  

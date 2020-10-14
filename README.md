@@ -4,6 +4,8 @@ The Jedi code is a simple questionare that determines if a user resembles the pe
 
 ![Project Image](jedipic.png)
 
+
+
 ## Motivation
 
 Our motivation when building this application was to create an engaging questionaire for people interested in Star Wars. Our group focused on building a theme similar to the films to make fans excited. 
