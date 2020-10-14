@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from "axios"
+import jediSide from './../components/react-sound/jediside.jpg'
+import sithSide from './../components/react-sound/darkside.jpg'
+
 class UserListItem extends Component {
     state={
         user: {},
         name:'',
     }
-
 
 
     handleChange = event => {
@@ -36,9 +38,9 @@ class UserListItem extends Component {
 
     render() {
         console.log("this",this.state)
-        // const {user} = this.state
+         // const {user} = this.state
         return (
-            <div>
+            <div className="overlay" style={{backgroundImage: this.state.user.jedi? "url(" + jediSide + ")":"url(" + sithSide + ")",backgroundSize:'cover'}}>
                 {/* <h1><strong> name:</strong> {this.state.user.name} </h1>     
 
                 <h1><strong>status: </strong> {this.state.user.jedi}</h1>
@@ -46,11 +48,14 @@ class UserListItem extends Component {
                 <input onChange={this.handleChange}
                        value={this.state.name}/>  <button onClick={this.handleSubmit}> submit change </button>  */}
 
- <div className="card" style={{backgroundColor:this.state.user.sith? 'red':'green'}}>
+ <div className="container">
+     <div className="row">
+         <div className="col-4">
+         <div className="card" style={{backgroundColor:this.state.user.sith? 'rgba(217, 30, 24, .4)':'rgba(63, 195, 128, .4)',color:'black'}}>
    <div className="card-body playerCard">
-       <h1> Player Card</h1>
+       <h3> Player Card</h3>
      <h5 className="card-title"> <strong> name:</strong> {this.state.user.name}</h5>
-     <h6 className="card-subtitle mb-2 text-muted"><strong> Sith / Jedi: </strong> {this.state.user.sith? "Sith": "Jedi"}</h6>
+     <h6 ><strong> Sith / Jedi: </strong> {this.state.user.sith? "Sith": "Jedi"}</h6>
      {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
       
      {/* <div> 
@@ -60,6 +65,12 @@ class UserListItem extends Component {
    </div>
  </div>
             </div>
+         </div>
+     </div>
+ </div>
+ 
+ 
+ 
         );
     }
 }
