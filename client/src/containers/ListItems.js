@@ -47,7 +47,7 @@ const sithList = [ darthmaul,darthvader,darthsidi]
     <div style={{backgroundColor:'rgba(240,255,255,.4)',padding:'8px',marginBottom:'20px',borderRadius:'8px'}}>  
       <h5 className="card-title">Name: <span> {item.name}</span></h5>
       {/* <h6 className="card-subtitle mb-2 text-muted"> {item.jedi? '':''}   </h6> */}
-      <p className="card-text">  <strong> Sith / Jedi: </strong> {item.sith? "Sith": "Jedi"}
+      <p className="card-text">  <strong> status: </strong> {item.sith? "Sith": "Jedi"}
 
    </p>
   </div>
