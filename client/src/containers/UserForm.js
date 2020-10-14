@@ -394,6 +394,7 @@ deleteUserById = (id) => {
     <div style={{textAlign:'center'}} className="container">
     <div className="form-check form-check-inline center">
 
+ 
     <div >
     <input className="form-check input" id="q1a"value="a" name="q1"type="radio"></input>1 
     </div>
@@ -865,7 +866,7 @@ deleteUserById = (id) => {
 </div>
 </div>
 
-<div className="Questions"><p>"You see an injured Porg, Do you help it?</p></div>
+<div className="Questions"><p>You see an injured Porg, Do you help it?</p></div>
 
     <div className="jumbotron jumbotron-fluid">
     <div className="container">
@@ -944,7 +945,7 @@ type="submit"
 </h1>:null }
 
  
-{this.state.visible? <h5 style={{color:this.state.result<5?'red':'green'}} className="card-text">  {this.state.result<5? "Do you feel it? Do you feel the power of the dark side? The only real power! The only thing worth living for!": "The Force Is Strong With This One..."}
+{this.state.visible? <h5 style={{color:this.state.result<5?'red':'green'}} className="card-text">  {this.state.result<5? `Do you feel it? Do you feel the power of the dark side? The only real power! The only thing worth living for!`: "The Force Is Strong With This One..."}
 
 </h5>:null}
  

@@ -15,6 +15,9 @@ body {
 }
 
  .Title-Description {
+     border-top-left-radius:10px;
+     border-top-right-radius:10px;
+
      background-image: url(https://lh3.googleusercontent.com/bBr5oG5wMaszl3b-BXgvKA3l8rkx27vrGKg5SsF-tqr1Yv8CKnWsLLdR-dSzFu1uGXRCOhWSodnM1olI55QD_AlyHVYb3AFYMX56zyYNDN0FZuOu3Geq5HckbmlGgI68jpXbclruGA=w2400);
     /* background-image: linear-gradient(rgb(187, 10, 10), rgb(8, 34, 184)); */
      padding-bottom: 1in;
@@ -174,5 +177,6 @@ cursor:pointer
 .users{background-color:#A9A9A9; border-radius:10px}
 
 .container{
+    
     text-align: center;
-}
+ }

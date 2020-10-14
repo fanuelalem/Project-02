@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from "axios"
 import jediSide from './../components/react-sound/jediside.jpg'
 import sithSide from './../components/react-sound/darkside.jpg'
+// import {Link } from "react-router-dom"
+
 
 class UserListItem extends Component {
     state={
@@ -47,6 +49,26 @@ class UserListItem extends Component {
                 
                 <input onChange={this.handleChange}
                        value={this.state.name}/>  <button onClick={this.handleSubmit}> submit change </button>  */}
+
+
+{/* <div className="container">
+    <div className="row">
+        <div className='col-12'> 
+        <ul style={{float:'right',marginRight:'80px',marginTop:'25px'}}class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <Link class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</Link>
+  </li>
+  <li class="nav-item" role="presentation">
+    <Link class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</Link>
+  </li>
+  
+</ul>
+ 
+        </div>
+    </div>
+</div> */}
+
+
 
  <div className="container">
      <div className="row">
