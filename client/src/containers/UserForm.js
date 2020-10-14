@@ -348,7 +348,7 @@ deleteUserById = (id) => {
                 <div className="row">
                     <div className="col-12"> 
 
-                    <div style={{backgroundColor:'black'}}>
+                    <div style={{borderRadius:'25px'}}>
 
  
                     <p className="Title-Description">
@@ -907,7 +907,7 @@ deleteUserById = (id) => {
 
 <form style={{paddingTop:'18px',paddingBottom:'10px'}}class="form-inline">
   <div class="form-group">
-     <input onChange={this.onChangeHandler} value={this.state.name} placeholder="name" type="text" name="name" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline"/>
+     <input onChange={this.onChangeHandler} value={this.state.name} placeholder="name.." type="text" name="name" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline"/>
       <input className="btn btn-danger submit" 
 onClick={this.submitAnswers} 
 type="submit" 
@@ -920,7 +920,7 @@ type="submit"
 
 </form>
 
-{this.state.visible?<h1 style={{textAlign:'center',color:'white',backgroundColor:'black',marginBottom:'0',paddingBottom:'8px',paddingTop:'8px'}}>Your score: {this.state.result}/10 
+{this.state.visible?<h1 style={{textAlign:'center',color:'white',marginBottom:'0',paddingBottom:'8px',paddingTop:'8px'}}>Your score: {this.state.result}/10 
 
  
 </h1>:null }
