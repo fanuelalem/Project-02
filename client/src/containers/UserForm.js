@@ -368,7 +368,7 @@ deleteUserById = (id) => {
     <p>Han shot first?</p></div>
 
     <div className="jumbotron jumbotron-fluid">
-    <div className="container">
+    <div style={{textAlign:'center'}} className="container">
     <div className="form-check form-check-inline center">
 
     <div >

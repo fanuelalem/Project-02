@@ -32,11 +32,11 @@ const sithList = [ darthmaul,darthvader,darthsidi]
 
 
 
-  <div className="list-container-form"> 
+  <div> 
 
  
  
-
+ 
 {props.items.map((item,index,id,)=>(
  
 
@@ -69,7 +69,7 @@ const sithList = [ darthmaul,darthvader,darthsidi]
  
  
   ))}
-
+ 
  
 {/* </Link> */}
  

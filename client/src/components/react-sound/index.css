@@ -149,9 +149,7 @@ cursor:pointer
      
  }
 
- .list-container-form{
-     background-color:purple
- }
+ 
 .form-container{
 
  
@@ -167,3 +165,7 @@ cursor:pointer
  .submit{margin-left:15px;}
 .mybtn{background-color:#5F9EA0;width:200px}
 .users{background-color:#A9A9A9; border-radius:10px}
+
+.container{
+    text-align: center;
+}
