@@ -132,15 +132,14 @@ event.preventDefault()
 
  }
  
- getResult = (event) => {
-}
+
 getUsers = () => {
      axios.get('http://localhost:8000/users')
     .then((response)=>{
         this.setState({
-            users: response.data
+            users: response.data.reverse()
         }, ()=>{
-            console.log(response.data)
+            console.log(response.data,'this is test')
         })
     })
     .catch((e)=>{
