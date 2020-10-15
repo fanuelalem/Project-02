@@ -97,7 +97,7 @@ event.preventDefault()
             
 
             if(score>=5){
-                axios.post("http://localhost:8000/jedi", {name:this.state.name,points:score})
+                axios.post("/jedi", {name:this.state.name,points:score})
                 .then((response)=>{
                     this.getUsers()
                     this.setState({name:""})
@@ -108,7 +108,7 @@ event.preventDefault()
                 }) 
              }
             else{
-                axios.post("http://localhost:8000/sith", {name:this.state.name,points:score})
+                axios.post("/sith", {name:this.state.name,points:score})
                 .then((response)=>{
                     this.getUsers()
                     this.setState({name:""})
@@ -134,7 +134,7 @@ event.preventDefault()
  
 
 getUsers = () => {
-     axios.get('http://localhost:8000/users')
+     axios.get('/users')
     .then((response)=>{
         this.setState({
             users: response.data.reverse()
@@ -175,7 +175,7 @@ getUsers = () => {
 // }
 
 deleteUserById = (id) => {
-    axios.delete(`http://localhost:8000/users/${id}`)
+    axios.delete(`/users/${id}`)
     .then((response)=>{
         this.getUsers();
     })

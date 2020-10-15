@@ -17,7 +17,7 @@ class UserListItem extends Component {
     }
     // async 
     componentDidMount(){
-        axios.get(`http://localhost:8000/users/${this.props.match.params.userId}`).then((response)=>{
+        axios.get(`/users/${this.props.match.params.userId}`).then((response)=>{
             this.setState({user: response.data})
         })
         .catch((e)=>{
@@ -29,8 +29,8 @@ class UserListItem extends Component {
     handleSubmit = async event => {
         event.preventDefault()
         try{
-            await axios.patch(`http://localhost:8000/users/${this.props.match.params.userId}`,{name:this.state.name})
-            const {data: user} = await axios.get(`http://localhost:8000/users/${this.props.match.params.userId}`)
+            await axios.patch(`/users/${this.props.match.params.userId}`,{name:this.state.name})
+            const {data: user} = await axios.get(`/users/${this.props.match.params.userId}`)
             this.setState({user,name:''})
          }
         catch(e){
