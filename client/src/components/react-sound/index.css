@@ -131,7 +131,7 @@ text-align-last: center;
 }
 
 .card {
-     padding:30px;
+     /* padding:30px; */
     /* background-color:#F5FFFA; */
     margin:30px;
     /* background-image: url('./../playerCard-image/playerCard.jpg'); */

@@ -77,6 +77,8 @@ class UserListItem extends Component {
    <div className="card-body playerCard">
        <h3> Player Card</h3>
      <h5 className="card-title"> <strong> name:</strong> {this.state.user.name}</h5>
+     <h5 className="card-title"> <strong> strength:</strong> {this.state.user.points*1000}</h5>
+
      <h6 ><strong> status: </strong> {this.state.user.sith? "Sith": "Jedi"}</h6>
      {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
       

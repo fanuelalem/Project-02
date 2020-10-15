@@ -21,9 +21,9 @@ module.exports = {
  
     },
     INSERT_JEDI: (req, res) => {
-        const { name } = req.body;
+        const { name,points } = req.body;
         
-        connection.query(userQuaries.INSERT_JEDI, name, (err, dbRes) => {
+        connection.query(userQuaries.INSERT_JEDI, [name,points], (err, dbRes) => {
             if (err) {
                 throw err;
             }
@@ -32,9 +32,9 @@ module.exports = {
         });
     },
     INSERT_SITH: (req, res) => {
-        const { name } = req.body;
+        const { name,points } = req.body;
         
-        connection.query(userQuaries.INSERT_SITH, name, (err, dbRes) => {
+        connection.query(userQuaries.INSERT_SITH, [name,points], (err, dbRes) => {
             if (err) {
                 throw err;
             }

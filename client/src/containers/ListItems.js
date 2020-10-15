@@ -1,14 +1,17 @@
 import React from "react" 
 import { Link } from "react-router-dom"
 import "./../components/react-sound/index.css"
-import yoda from './../components/react-sound/yoda.png';
+// import yodahd from './../components/react-sound/yoda.png';
 import darthvader from './../components/react-sound/darth.jpeg';
-import luke from './../components/react-sound/Luke_Sky7.jpg'
+// import luke from './../components/react-sound/Luke_Sky7.jpg'
 import mace from './../components/react-sound/mace.jpg'
 import darthmaul from './../components/react-sound/darthmaul.jpeg'
 import darthsidi from './../components/react-sound/darthsidi.jpg'
+import rey from './../components/react-sound/rey.jpg'
+import lukeSkywalker from './../components/react-sound/lukeskywalkerhd.jpg'
+import yoda from './../components/react-sound/yodahd.jpg'
 
-const jediList = [luke,yoda,mace]
+const jediList = [lukeSkywalker,yoda,rey]
 const sithList = [ darthmaul,darthvader,darthsidi]
 
 
@@ -39,8 +42,10 @@ const sithList = [ darthmaul,darthvader,darthsidi]
 {props.items.map((item,index,id,)=>(
  
 
-    <div key={item.id} className="card" style={{width:'18rem',float:'left',backgroundImage: item.jedi? "url(" + jediList[1] + ")":"url(" + sithList[2] + ")",backgroundSize:'cover',border:'none'}}>
+    <div key={item.id} className="card" style={{width:'18rem',float:'left',backgroundImage:  item.points == 8 || item.points == 9 || item.points == 10? "url(" + jediList[1] + ")":item.points == 7 || item.points == 6? "url(" + jediList[0] + ")":item.points ==5?"url(" + jediList[2] + ")":item.points ==4 || item.points ==3?"url(" + sithList[1] + ")":item.points ==2?"url(" + sithList[0] + ")":item.points==1||item.points==0?"url(" + sithList[2] + ")":''
+    ,backgroundSize:'cover',border:'none'}}>
   
+ 
   <div className="card-body">
 
     <div style={{backgroundColor:'rgba(240,255,255,.4)',padding:'8px',marginBottom:'20px',borderRadius:'8px'}}>  
@@ -49,23 +54,26 @@ const sithList = [ darthmaul,darthvader,darthsidi]
       {/* <h2> {item.points}</h2> */}
       {/* <h6 className="card-subtitle mb-2 text-muted"> {item.jedi? '':''}   </h6> */}
       <p className="card-text">  <strong> status: </strong> {item.sith? "Sith": "Jedi"}
-     
-    </p>
+      <p><strong> strength: </strong> {item.points*1000} </p>
+     </p>
   </div>
       
       
      
-      
+  
+  
+    </div>
+<div style={{backgroundColor:item.jedi?'#006400':'#8B0000',paddingTop:'10px',paddingBottom:'10px',borderBottomRightRadius:'.25rem',borderBottomLeftRadius:'.25rem'}}>
+
+         
   <Link style={{marginRight:'10px'}}className="go-to-user"to={`users/${item.id}`} >
     <button className="btn btn-success"> details... </button>
     </Link>
 
   
        <button className="btn btn-danger deletebtn" onClick={()=> props.handleDelete(item.id)}>Delete</button>
-  
-   
-    </div>
-  </div>
+       </div>
+   </div>
 
  
  

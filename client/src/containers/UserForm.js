@@ -14,7 +14,8 @@ class UserForm extends Component {
         users:[],
         status: "good",
         result:0,
-        visible: false
+        visible: false,
+        points:0
  
 
       }
@@ -90,14 +91,32 @@ event.preventDefault()
             if(q10 === answers[5] || q10 === answers[6] || q10 === answers[7] || q10 === answers[8] || q10 === answers[9]){
                 score++
             }
-            this.setState({result:score})
-    
-    
+            // this.setState({result:score,points:score})
+  
+            this.setState({result:score,points:score})
+            
+
             if(score>=5){
-                this.postJedi()
-            }
+                axios.post("http://localhost:8000/jedi", {name:this.state.name,points:score})
+                .then((response)=>{
+                    this.getUsers()
+                    this.setState({name:""})
+                    
+                })
+                .catch((e)=>{
+                    console.log(e)
+                }) 
+             }
             else{
-                this.postSith()
+                axios.post("http://localhost:8000/sith", {name:this.state.name,points:score})
+                .then((response)=>{
+                    this.getUsers()
+                    this.setState({name:""})
+                    
+                })
+                .catch((e)=>{
+                    console.log(e)
+                })
             
             }
 
@@ -105,15 +124,16 @@ event.preventDefault()
 
 
             this.setState({
-                visible:true
-            })
+                visible:true,
+             })
 
         }
 
 
  }
-
-
+ 
+ getResult = (event) => {
+}
 getUsers = () => {
      axios.get('http://localhost:8000/users')
     .then((response)=>{
@@ -128,29 +148,32 @@ getUsers = () => {
     })
 }
 
-postSith = () => {
-    axios.post("http://localhost:8000/sith", {name:this.state.name})
-    .then((response)=>{
-        this.getUsers()
-        this.setState({name:""})
-        
-    })
-    .catch((e)=>{
-        console.log(e)
-    })
-}
+// postSith = () => {
+    
 
-postJedi = () => {
-    axios.post("http://localhost:8000/jedi", {name:this.state.name})
-    .then((response)=>{
-        this.getUsers()
-        this.setState({name:""})
+//     axios.post("http://localhost:8000/sith", {name:this.state.name,points:this.state.points})
+//     .then((response)=>{
+//         this.getUsers()
+//         this.setState({name:""})
         
-    })
-    .catch((e)=>{
-        console.log(e)
-    })
-}
+//     })
+//     .catch((e)=>{
+//         console.log(e)
+//     })
+// }
+
+// postJedi = () => {
+//     console.log(this.state.points,'klk')
+//     axios.post("http://localhost:8000/jedi", {name:this.state.name,points:this.state.points})
+//     .then((response)=>{
+//         this.getUsers()
+//         this.setState({name:""})
+        
+//     })
+//     .catch((e)=>{
+//         console.log(e)
+//     })
+// }
 
 deleteUserById = (id) => {
     axios.delete(`http://localhost:8000/users/${id}`)
@@ -163,6 +186,7 @@ deleteUserById = (id) => {
 }
 
     render() {
+
         return (
             // <div>
             //     <Questions 
@@ -735,7 +759,8 @@ deleteUserById = (id) => {
   <div class="form-group">
      <input onChange={this.onChangeHandler} value={this.state.name} placeholder="name.." type="text" name="name" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline"/>
       <input className="btn btn-danger submit" 
-onClick={this.submitAnswers} 
+onClick={this.submitAnswers}
+onClick={this.getResult}
 type="submit" 
  value="submit">
      
@@ -769,8 +794,7 @@ type="submit"
 </section>
   
 
- 
-        
+         
 <div> 
     
     <ListItems key={this.state.users.id} score={this.state.result} items={this.state.users} handleDelete={this.deleteUserById} />
