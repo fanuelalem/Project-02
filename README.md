@@ -3,6 +3,8 @@
 The Jedi code is a simple questionare that determines if a user resembles the personality of a sith or a jedi most.
 
 ![Project Image](jedipic.png)
+![Project Image](ss2.png)
+
 
 
 
