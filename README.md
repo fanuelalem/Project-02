@@ -34,7 +34,7 @@ To participate, give your best answers in the questionaire then click 'submit' t
 
 ## Deployed Link
 
-* [See Live Site](https://fanuelproject2.herokuapp.com/)
+* [See Live Site](https://thejedicode.herokuapp.com/)
 
 
 ## Authors
