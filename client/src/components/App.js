@@ -2,7 +2,7 @@ import React from 'react';
 
 // import Sound from 'react-sound';
 import UserForm from "./../containers/UserForm"
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route,HashRouter} from 'react-router-dom'
 import UserListItem from "./../containers/userListItem"
 // import NavBar from "./../components/navBar/index"
 import Home from './../containers/home'
@@ -25,8 +25,9 @@ const App = props => (
   
   <Router> 
     
+<HashRouter>
 
-  {/* <NavBar/> */}
+   {/* <NavBar/> */}
 
 <Route exact path="/" component={Home}/>
 <Route exact path="/quiz" component={UserForm}/> 
@@ -36,7 +37,8 @@ const App = props => (
 <Route exact path="/users/:userId" component={UserListItem}/>
 
  
-       
+       </HashRouter>
+
     </Router>
 
 
